@@ -67,19 +67,6 @@ This project answers the following questions:
 - HAVING
 
 ---
-## Project Files
-
-```
-sql-transaction-analysis/
-│
-├── README.md
-├── transaction_analysis.sql
-├── customers.csv
-├── transactions.csv
-└── images/
-```
-
----
 ## Sample Analysis
 
 Example Question:
