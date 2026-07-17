@@ -1,0 +1,28 @@
+--SQL Questions for the Transaction Analysis
+
+--Show all of the transactions?
+SELECT * FROM Transaction_analysis;
+
+--Show transactions over 1000$?
+SELECT Customer_ID, Amount FROM Transaction_analysis Where Amount > 1000;
+
+--Sort transactions from highest amount to lowest?
+SELECT Customer_ID, Amount FROM Transaction_analysis ORDER BY Amount DESC;
+
+--How many transactions are there?
+SELECT COUNT(Transaction_ID) FROM Transaction_analysis;
+
+--What is the total transaction amount?
+SELECT SUM(Amount) as Total_Transaction FROM Transaction_analysis;
+
+--What is the average transaction amount?
+SELECT AVG(Amount) as Average_Transaction FROM Transaction_analysis;
+
+--Which customer spent the most money?
+SELECT Customer_ID, SUM(Amount) as Amount FROM Transaction_analysis GROUP BY Customer_ID ORDER BY Amount DESC;
+
+--How many transaction did each customer make?
+SELECT Count(Transaction_ID) As Total_Tansaction FROM Transaction_analysis GROUP BY Customer_ID ;
+
+--Which customer made more than two transactions?
+SELECT Customer_ID, Count(Transaction_ID) As Total_Tansaction FROM Transaction_analysis GROUP BY Customer_ID HAVING COUNT(Transaction_ID) >= 2 ORDER BY Customer_ID ASC ;
