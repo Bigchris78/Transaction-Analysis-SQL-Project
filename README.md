@@ -27,14 +27,6 @@ The analysis was completed using SQL and focuses on skills commonly used by Frau
 
 ## Dataset
 
-### Customers Table
-
-| Column | Description |
-|---------|-------------|
-| customer_id | Unique customer identifier |
-| customer_name | Customer's full name |
-| state | Customer's state |
-
 ### Transactions Table
 
 | Column | Description |
@@ -42,8 +34,9 @@ The analysis was completed using SQL and focuses on skills commonly used by Frau
 | transaction_id | Unique transaction identifier |
 | customer_id | Customer making the transaction |
 | transaction_date | Date of transaction |
+| state | Transaction state |
 | amount | Transaction amount (USD) |
-
+| review flags | Transaction amount flags |
 ---
 
 ## Business Questions
@@ -52,13 +45,13 @@ This project answers the following questions:
 
 1. Show all transactions.
 2. Show transactions greater than $1,000.
-3. Count the total number of transactions.
-4. Calculate the total transaction volume.
-5. Calculate the average transaction amount.
-6. Find total transaction volume by state.
-7. Identify the top customers by total spending.
-8. Count transactions for each customer.
-9. Identify customers with multiple transactions.
+3. Show the transaction from highest to lowest.
+4. How many transactions are there.
+5. What is the total transaction amount
+6. What is the average transaction amount.
+7. Which customer spent the most money.
+8. How many transactions did each customer make.
+9. Which customers made multiple transactions.
 
 ---
 
@@ -72,10 +65,8 @@ This project answers the following questions:
 - AVG
 - GROUP BY
 - HAVING
-- INNER JOIN
 
 ---
-
 ## Project Files
 
 ```
@@ -89,7 +80,6 @@ sql-transaction-analysis/
 ```
 
 ---
-
 ## Sample Analysis
 
 Example Question:
